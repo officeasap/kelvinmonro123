@@ -4,7 +4,7 @@ interface ShipmentQrPanelProps {
   trackingNumber: string
 }
 
-const LIVE_REFERENCE_BASE = 'https://securetracelogistics.com/track/'
+const LIVE_REFERENCE_BASE = 'https://www.tracesecureone.com/track/'
 
 export function ShipmentQrPanel({
   trackingNumber,
