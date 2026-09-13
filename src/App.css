@@ -3294,3 +3294,236 @@ h1 {
   object-fit: contain;
   display: block;
 }
+
+
+
+
+/* ============================================================
+   §31 · MOBILE VIEWPORT CONTAINMENT
+   Append-only.
+   
+   Purpose:
+     Eliminate horizontal page overflow on narrow devices.
+     Desktop layout remains untouched.
+   
+   Doctrine:
+     The STL page must remain fully contained inside the
+     device viewport. No component may pull the document
+     horizontally beyond the viewport boundary.
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* ----------------------------------------------------------
+     31.1 — Viewport containment
+     ---------------------------------------------------------- */
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    position: relative;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* ----------------------------------------------------------
+     31.2 — Main STL shell
+     ---------------------------------------------------------- */
+
+  .public-shell,
+  .public-main,
+  .public-main-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
+
+  .public-main-inner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ----------------------------------------------------------
+     31.3 — Header containment
+     ---------------------------------------------------------- */
+
+  .public-header,
+  .public-header-primary {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .public-header {
+    overflow-x: clip;
+  }
+
+  .public-header-primary {
+    flex-wrap: wrap;
+  }
+
+  .public-brand {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .public-brand-copy {
+    min-width: 0;
+    max-width: calc(100% - 52px);
+  }
+
+  .public-brand-title,
+  .public-brand-tagline {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .public-nav {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ----------------------------------------------------------
+     31.4 — Public page sections
+     ---------------------------------------------------------- */
+
+  .public-hero,
+  .public-hero-copy,
+  .hero-route-card,
+  .tracking-page,
+  .tracking-heading,
+  .tracking-heading > div,
+  .tracking-panel,
+  .public-panel,
+  .support-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .public-hero {
+    overflow: hidden;
+  }
+
+  /* ----------------------------------------------------------
+     31.5 — Floating cards
+     ---------------------------------------------------------- */
+
+  .floating-card-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: hidden;
+  }
+
+  .floating-card,
+  .card-floating {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* ----------------------------------------------------------
+     31.6 — Text containment
+     ---------------------------------------------------------- */
+
+  .public-hero h1,
+  .tracking-heading h1,
+  .public-panel h2,
+  .floating-card h2,
+  .floating-card p,
+  .tracking-waybill,
+  .public-hero-description,
+  .public-hero-support {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* ----------------------------------------------------------
+     31.7 — Tracking/search controls
+     ---------------------------------------------------------- */
+
+  .tracking-search,
+  .tracking-search form,
+  .tracking-search input,
+  .tracking-search button {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .tracking-search form {
+    width: 100%;
+  }
+
+  .tracking-search input {
+    width: 100%;
+  }
+
+  /* ----------------------------------------------------------
+     31.8 — Route visual containment
+     ---------------------------------------------------------- */
+
+  .route-line,
+  .route-cities,
+  .route-status,
+  .hero-route-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .route-cities {
+    overflow-wrap: anywhere;
+  }
+
+  /* ----------------------------------------------------------
+     31.9 — Tables / long operational content
+     ---------------------------------------------------------- */
+
+  .tracking-panel,
+  .tracking-route-card,
+  .support-panel {
+    overflow-x: hidden;
+  }
+
+  /* ----------------------------------------------------------
+     31.10 — Footer containment
+     ---------------------------------------------------------- */
+
+  .public-footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .public-footer-logo {
+    max-width: 140px !important;
+  }
+
+  .public-footer-line {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
