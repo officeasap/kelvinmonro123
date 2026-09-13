@@ -1,0 +1,558 @@
+/* ============================================================
+   SECURE TRACE LOGISTICS — CATHEDRAL NEUMORPHIC MATERIAL SYSTEM
+   tokens.css — v1.0 — SEALED
+
+   Authoritative source for:
+     · Powder Ash substrate
+     · Charcoal deep ground
+     · Ember action
+     · Living Green signal
+     · Semantic status language
+     · Deep-press shadow system
+     · Bent-leaf geometry
+     · Typography
+     · Motion
+     · Scrollbar
+     · Focus ring
+     · Reduced-motion fallbacks
+
+   Governed by:
+     · Smudgefire Codex v1.0 (Cathedral Neumorphic Law)
+     · STL Master Product + Tracking Architecture Law v1.0
+     · STL Non-Negotiable Tracking Laws L01–L15
+     · STL Non-Negotiable Pricing Laws P01–P15
+     · STL Final Color Cocktail v1.0
+
+   This file defines material only.
+   It knows nothing about shipments, quotes, routes, users, or Supabase.
+   ============================================================ */
+
+
+/* ============================================================
+   00 · FONT LOADING
+   Self-contained. EB Garamond for display, Inter for UI.
+   System fallbacks are declared on the tokens themselves.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* ============================================================
+   01 · CANONICAL TOKENS
+   ============================================================ */
+
+:root {
+
+  /* ──────────────────────────────────────────────────────────
+     01.1 · SUBSTRATE — POWDER ASH
+     Canonical page surface. Never white. Never black.
+     ────────────────────────────────────────────────────────── */
+  --stl-powder-ash:              #d5d2cd;
+  --stl-powder-ash-raised:       #ddd9d3;
+  --stl-powder-ash-pressed:      #cbc7c1;
+  --stl-powder-ash-deep:         #bfbbb4;
+
+  /* ──────────────────────────────────────────────────────────
+     01.2 · CHARCOAL GROUND — DEEP PRESS MATERIAL
+     Canonical shadow base, card substrate, inset wells.
+     ────────────────────────────────────────────────────────── */
+  --stl-charcoal-ground:         #292824;
+  --stl-charcoal-card:           #2b2a28;
+  --stl-charcoal-card-deep:      #1f1e1c;
+  --stl-charcoal-border:         #3a3833;
+
+  /* ──────────────────────────────────────────────────────────
+     01.3 · EMBER — PRIMARY ACTION / IGNITION
+     CTAs, active nav, focus rings, scrollbar, active nodes.
+     ────────────────────────────────────────────────────────── */
+  --stl-ember:                   #d57253;
+  --stl-ember-bright:            #e88361;
+  --stl-ember-deep:              #b85a3e;
+  --stl-ember-shadow:            rgba(155, 67, 43, 0.28);
+  --stl-ember-glow:              rgba(213, 114, 83, 0.18);
+
+  /* ──────────────────────────────────────────────────────────
+     01.4 · LIVING GREEN — HEALTHY / LIVE / CONFIRMED
+     Icons, LEDs, checkmarks, success. Surgical use only.
+     ────────────────────────────────────────────────────────── */
+  --stl-living-green:            #58c350;
+  --stl-living-green-bright:     #6fd966;
+  --stl-living-green-deep:       #3f9a3a;
+  --stl-living-green-shadow:     rgba(88, 195, 80, 0.24);
+
+  /* ──────────────────────────────────────────────────────────
+     01.5 · SEMANTIC STATUS — AUTHORITATIVE
+     Carries meaning. Never overridden by ember.
+     ────────────────────────────────────────────────────────── */
+  --stl-status-normal:           #58c350;   /* green   — confirmed / healthy   */
+  --stl-status-movement:         #4a90c8;   /* blue    — in transit / process  */
+  --stl-status-attention:        #d57253;   /* orange  — hold / attention      */
+  --stl-status-critical:         #c8403a;   /* red     — exception / error     */
+  --stl-status-upcoming:         #8a8784;   /* grey    — upcoming / disabled   */
+
+  /* ──────────────────────────────────────────────────────────
+     01.6 · TEXT
+     ────────────────────────────────────────────────────────── */
+  --stl-text-primary:            #3c3c3c;
+  --stl-text-secondary:          #5c5854;
+  --stl-text-muted:              #7a756f;
+  --stl-text-inverse:            #f0ede8;
+  --stl-text-inverse-muted:      #a8a49e;
+  --stl-text-ember:              #d57253;
+
+  /* ──────────────────────────────────────────────────────────
+     01.7 · SMUDGE — CONTROLLED TONAL DISTURBANCE
+     Never blur. Applied via pseudo-elements.
+     ────────────────────────────────────────────────────────── */
+  --stl-smudge-ash:              rgba(41, 40, 36, 0.10);
+  --stl-smudge-ash-deep:         rgba(41, 40, 36, 0.18);
+  --stl-smudge-ember:            rgba(155, 67, 43, 0.18);
+  --stl-smudge-green:            rgba(88, 195, 80, 0.16);
+
+  /* ──────────────────────────────────────────────────────────
+     01.8 · RADIUS — BENT-LEAF GEOMETRY
+     Signature asymmetric corner: one small, three large.
+     ────────────────────────────────────────────────────────── */
+  --stl-radius-sm:               6px;
+  --stl-radius-md:               10px;
+  --stl-radius-lg:               14px;
+  --stl-radius-xl:               20px;
+  --stl-radius-2xl:              28px;
+  --stl-radius-bent-leaf:        14px 14px 14px 4px;
+  --stl-radius-bent-leaf-lg:     20px 20px 20px 5px;
+  --stl-radius-bent-leaf-xl:     28px 28px 28px 6px;
+  --stl-radius-pill:             999px;
+
+  /* ──────────────────────────────────────────────────────────
+     01.9 · TYPOGRAPHY
+     ────────────────────────────────────────────────────────── */
+  --stl-font-display:            'EB Garamond', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --stl-font-ui:                 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --stl-font-mono:               'JetBrains Mono', 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  /* ──────────────────────────────────────────────────────────
+     01.10 · MOTION — COMPRESS → SETTLE
+     Never bounce. Never glow-pulse. Material behavior only.
+     ────────────────────────────────────────────────────────── */
+  --stl-ease-press:              cubic-bezier(0.34, 0.06, 0.32, 1.0);
+  --stl-ease-smudge:             cubic-bezier(0.22, 0.08, 0.22, 1.0);
+  --stl-ease-lift:               cubic-bezier(0.16, 0.84, 0.44, 1.0);
+
+  --stl-duration-fast:           120ms;
+  --stl-duration-press:          160ms;
+  --stl-duration-smudge:         220ms;
+  --stl-duration-lift:           200ms;
+  --stl-duration-slow:           320ms;
+}
+
+
+/* ============================================================
+   02 · DEEP-PRESS SHADOW SYSTEM
+   All shadows are built from --stl-charcoal-ground (#292824),
+   never from translucent black.
+   ============================================================ */
+
+:root {
+
+  /* Raised — resting lift above Powder Ash */
+  --stl-shadow-raised:
+      0 1px 0 rgba(255, 255, 255, 0.62) inset,
+      0 -1px 0 rgba(41, 40, 36, 0.18) inset,
+      0 4px 8px rgba(41, 40, 36, 0.14),
+      0 12px 24px rgba(41, 40, 36, 0.10);
+
+  /* Raised — hover lift */
+  --stl-shadow-raised-hover:
+      0 1px 0 rgba(255, 255, 255, 0.72) inset,
+      0 -1px 0 rgba(41, 40, 36, 0.22) inset,
+      0 6px 12px rgba(41, 40, 36, 0.18),
+      0 18px 32px rgba(41, 40, 36, 0.12);
+
+  /* Pressed — carved into Powder Ash */
+  --stl-shadow-pressed:
+      0 2px 4px rgba(41, 40, 36, 0.36) inset,
+      0 -1px 0 rgba(255, 255, 255, 0.42) inset,
+      0 0 0 1px rgba(41, 40, 36, 0.08);
+
+  /* Pressed — deep well (inputs, steppers, inset surfaces) */
+  --stl-shadow-pressed-deep:
+      0 4px 8px rgba(41, 40, 36, 0.48) inset,
+      0 -1px 0 rgba(255, 255, 255, 0.32) inset;
+
+  /* Ember — primary action (CTA, active nav, scrollbar) */
+  --stl-shadow-ember:
+      0 1px 0 rgba(255, 255, 255, 0.28) inset,
+      0 -1px 0 rgba(120, 50, 30, 0.48) inset,
+      0 4px 10px rgba(155, 67, 43, 0.28),
+      0 12px 24px rgba(155, 67, 43, 0.18);
+
+  /* Ember — pressed */
+  --stl-shadow-ember-pressed:
+      0 3px 6px rgba(120, 50, 30, 0.52) inset,
+      0 -1px 0 rgba(255, 180, 150, 0.32) inset;
+
+  /* Charcoal card — carved slab on Powder Ash */
+  --stl-shadow-card:
+      0 1px 0 rgba(255, 255, 255, 0.06) inset,
+      0 8px 20px rgba(41, 40, 36, 0.28),
+      0 24px 48px rgba(41, 40, 36, 0.16);
+
+  /* Green — LED glow (surgical, close, restrained) */
+  --stl-shadow-green-glow:
+      0 0 6px rgba(88, 195, 80, 0.55),
+      0 0 2px rgba(88, 195, 80, 0.85);
+
+  /* Blue — LED glow */
+  --stl-shadow-blue-glow:
+      0 0 6px rgba(74, 144, 200, 0.55),
+      0 0 2px rgba(74, 144, 200, 0.85);
+
+  /* Ember — LED glow */
+  --stl-shadow-ember-glow:
+      0 0 6px rgba(213, 114, 83, 0.55),
+      0 0 2px rgba(213, 114, 83, 0.85);
+
+  /* Red — LED glow */
+  --stl-shadow-red-glow:
+      0 0 6px rgba(200, 64, 58, 0.55),
+      0 0 2px rgba(200, 64, 58, 0.85);
+
+  /* Focus — restrained interaction boundary */
+  --stl-shadow-focus:
+      0 0 0 2px var(--stl-powder-ash),
+      0 0 0 4px var(--stl-ember);
+}
+
+
+/* ============================================================
+   03 · BASE RESET & GLOBAL SURFACE
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--stl-powder-ash);
+  color: var(--stl-text-primary);
+  font-family: var(--stl-font-ui);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--stl-font-display);
+  font-weight: 600;
+  color: var(--stl-text-primary);
+  letter-spacing: -0.02em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--stl-font-mono);
+}
+
+
+/* ============================================================
+   04 · GLOBAL SCROLLBAR — EMBER
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--stl-powder-ash-pressed);
+  border-radius: var(--stl-radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--stl-ember);
+  border-radius: var(--stl-radius-sm);
+  transition: background var(--stl-duration-press) var(--stl-ease-press);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--stl-ember-bright);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--stl-ember-deep);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--stl-ember) var(--stl-powder-ash-pressed);
+}
+
+
+/* ============================================================
+   05 · FOCUS RING
+   Restrained, ember, always visible when keyboard-navigating.
+   ============================================================ */
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--stl-shadow-focus);
+  border-radius: var(--stl-radius-sm);
+}
+
+
+/* ============================================================
+   06 · SEMANTIC STATUS UTILITY CLASSES
+   Authoritative state language. Used by every surface.
+   ============================================================ */
+
+.status-normal     { color: var(--stl-status-normal); }
+.status-movement   { color: var(--stl-status-movement); }
+.status-attention  { color: var(--stl-status-attention); }
+.status-critical   { color: var(--stl-status-critical); }
+.status-upcoming   { color: var(--stl-status-upcoming); }
+
+/* Status pill — bent-leaf, pressed substrate, semantic text */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--stl-radius-bent-leaf);
+  background: var(--stl-powder-ash-pressed);
+  box-shadow: var(--stl-shadow-pressed);
+  font-family: var(--stl-font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-pill.status-normal     { color: var(--stl-status-normal); }
+.status-pill.status-movement   { color: var(--stl-status-movement); }
+.status-pill.status-attention  { color: var(--stl-status-attention); }
+.status-pill.status-critical   { color: var(--stl-status-critical); }
+.status-pill.status-upcoming   { color: var(--stl-status-upcoming); }
+
+
+/* ============================================================
+   07 · LED PRIMITIVES
+   Small operational signals. Surgical. Restrained glow.
+   ============================================================ */
+
+.led {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--stl-status-upcoming);
+}
+
+.led-normal    { background: var(--stl-status-normal);    box-shadow: var(--stl-shadow-green-glow); }
+.led-movement  { background: var(--stl-status-movement);  box-shadow: var(--stl-shadow-blue-glow);  }
+.led-attention { background: var(--stl-status-attention); box-shadow: var(--stl-shadow-ember-glow); }
+.led-critical  { background: var(--stl-status-critical);  box-shadow: var(--stl-shadow-red-glow);   }
+.led-upcoming  { background: var(--stl-status-upcoming); }
+
+
+/* ============================================================
+   08 · EMBER PRIMITIVE — PRIMARY ACTION
+   ============================================================ */
+
+.btn-ember {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: var(--stl-radius-bent-leaf);
+  background: var(--stl-ember);
+  color: var(--stl-text-inverse);
+  font-family: var(--stl-font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: var(--stl-shadow-ember);
+  transition:
+    background var(--stl-duration-press) var(--stl-ease-press),
+    transform var(--stl-duration-press) var(--stl-ease-press),
+    box-shadow var(--stl-duration-press) var(--stl-ease-press);
+}
+
+.btn-ember:hover {
+  background: var(--stl-ember-bright);
+}
+
+.btn-ember:active {
+  background: var(--stl-ember-deep);
+  box-shadow: var(--stl-shadow-ember-pressed);
+  transform: translateY(1px);
+}
+
+.btn-ember:disabled {
+  background: var(--stl-powder-ash-pressed);
+  color: var(--stl-text-muted);
+  box-shadow: var(--stl-shadow-pressed);
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* ============================================================
+   09 · CHARCOAL CARD PRIMITIVE
+   Carved slab on Powder Ash. Used for data, tracking, quotes.
+   ============================================================ */
+
+.card-charcoal {
+  background: var(--stl-charcoal-card);
+  color: var(--stl-text-inverse);
+  border-radius: var(--stl-radius-bent-leaf-lg);
+  box-shadow: var(--stl-shadow-card);
+}
+
+.card-charcoal h1,
+.card-charcoal h2,
+.card-charcoal h3 {
+  color: var(--stl-text-inverse);
+}
+
+
+/* ============================================================
+   10 · CHARCOAL INSET WELL PRIMITIVE
+   Form fields, steppers, inset surfaces on charcoal cards.
+   ============================================================ */
+
+.well-charcoal {
+  background: var(--stl-charcoal-card-deep);
+  color: var(--stl-text-inverse);
+  border: 0;
+  border-radius: var(--stl-radius-sm);
+  box-shadow: var(--stl-shadow-pressed-deep);
+}
+
+.well-charcoal::placeholder {
+  color: var(--stl-text-inverse-muted);
+}
+
+
+/* ============================================================
+   11 · POWDER INSET WELL PRIMITIVE
+   Form fields, steppers on Powder Ash surfaces.
+   ============================================================ */
+
+.well-powder {
+  background: var(--stl-powder-ash-pressed);
+  color: var(--stl-text-primary);
+  border: 0;
+  border-radius: var(--stl-radius-bent-leaf);
+  box-shadow: var(--stl-shadow-pressed);
+}
+
+.well-powder::placeholder {
+  color: var(--stl-text-muted);
+}
+
+
+/* ============================================================
+   12 · REDUCED MOTION
+   Codex §24 — Cathedral remains recognizable without animation.
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --stl-duration-fast:   0ms;
+    --stl-duration-press:  0ms;
+    --stl-duration-smudge: 0ms;
+    --stl-duration-lift:   0ms;
+    --stl-duration-slow:   0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* ============================================================
+   14 · LIVING GREEN HIGHLIGHT — MATERIAL RIM
+   Not a second status green. A material warmth.
+   Used only as edge highlight on charcoal cards and live elements.
+   · --stl-living-green           (#58c350)  → semantic status
+   · --stl-living-green-highlight (#56cd64)  → material rim only
+   ============================================================ */
+
+:root {
+  --stl-living-green-highlight: #56cd64;
+  --stl-living-green-rim:       rgba(86, 205, 100, 0.18);
+  --stl-living-green-rim-soft:  rgba(86, 205, 100, 0.10);
+}
+
+/* Reduced motion: kill micro-motion, keep material state */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --stl-living-duration: 0ms;
+  }
+}
+
+
+/* ============================================================
+   §24 · STL TRACKING DISPLAY TOKENS
+   Beautification Law v1.0 — required colors & typography.
+   Self-hosted OCR-B from /public/assets/font/.
+   ============================================================ */
+
+@font-face {
+  font-family: 'OCR-B';
+  src:
+    url('/assets/font/OCR-B.otf') format('opentype'),
+    url('/assets/font/OCR-B.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Tracking identity — Law §5 */
+  --stl-tracking-green:        #67C962;
+
+  /* Cathedral soft green — Law §3.2 */
+  --stl-cathedral-soft-green:  #56CD64;
+
+  /* Powder white — Law §3.4 */
+  --stl-powder-white:          #F0EDE8;
+
+  /* Aircraft sky blue — restrained, operational */
+  --stl-aircraft-sky:          #6BA8D9;
+
+  /* Typography — Law §4 */
+  --stl-font-ui:               'Lucida Sans Unicode', 'Lucida Grande',
+                               'Lucida Sans', system-ui, -apple-system,
+                               'Segoe UI', Roboto, sans-serif;
+  --stl-font-identifier:       'OCR-B', 'Lucida Sans Unicode',
+                               'Lucida Grande', 'Menlo', 'Consolas',
+                               monospace;
+}

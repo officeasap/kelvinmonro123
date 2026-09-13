@@ -1,0 +1,38 @@
+{
+"name": "Secure Trace Logistics",
+"short_name": "STL",
+"description": "Secure shipment tracking and global logistics visibility.",
+"id": "/",
+"start_url": "/",
+"scope": "/",
+"display": "standalone",
+"orientation": "portrait-primary",
+"theme_color": "#292824",
+"background_color": "#F0EDE8",
+"lang": "en",
+"dir": "ltr",
+"categories": [
+"business",
+"productivity"
+],
+"icons": [
+{
+"src": "/stl-logo.png",
+"sizes": "any",
+"type": "image/png",
+"purpose": "any"
+},
+{
+"src": "/web-app-manifest-192x192.png",
+"sizes": "192x192",
+"type": "image/png",
+"purpose": "maskable"
+},
+{
+"src": "/web-app-manifest-512x512.png",
+"sizes": "512x512",
+"type": "image/png",
+"purpose": "maskable"
+}
+]
+}
